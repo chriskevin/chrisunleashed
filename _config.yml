@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
-baseurl: "/chrisunleashed"
-url: "https://chriskevin.github.io/"
+baseurl: /chrisunleashed
+url: https://chriskevin.github.io/
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
@@ -28,17 +28,17 @@ theme_settings:
   facebook:
   flickr:
   gitlab:
-  github: "chriskevin"
+  github: chriskevin
   google_plus:
   instagram:
-  linkedin:  # Full URL
+  linkedin:  https://www.linkedin.com/in/chris-sundberg-7b716744/ # Full URL
   pinterest:
   reddit:
   soundcloud:
-  stack_exchange:  # Full URL
+  stack_exchange: https://stackexchange.com/users/3005001/chris-sundberg # Full URL
   steam:
   tumblr:
-  twitter: "chrisXkevin"
+  twitter: chrisXkevin
   wordpress:
   youtube:
 
@@ -77,7 +77,22 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
-plugins: [jekyll-paginate]
+plugins: 
+  - jekyll-paginate
+  - jekyll-seo-tag
 exclude:
   - Gemfile
   - Gemfile.lock
+
+# SEO
+author: Chris Sundberg
+social:
+  name: Chris Sundberg
+  links:
+    - https://twitter.com/chrisXkevin
+    - https://www.linkedin.com/in/chris-sundberg-7b716744/
+    - https://github.com/chriskevin
+    - https://keybase.io/chriskevin
+twitter:
+  username: chrisXkevin
+  card: summary
