@@ -3,9 +3,9 @@ layout: default
 ---
 <article {% if page.feature-img %}class="feature-image"{% endif %}>
   <header style="background-image: url('{{ site.baseurl }}/{{ page.feature-img }}')">
-    <h1 class="title">{{ page.title }}</h1>
+    <h1 class="title" {% if page.heading-dark %}style="color: #222"{% endif %}>{{ page.title }}</h1>
     {% if page.subtitle %}<h2 class="subtitle">{{ page.subtitle }}</h2>{% endif %}
-    <p class="meta">
+    <p class="meta" {% if page.heading-dark %}style="color: #222"{% endif %}>
       {{ page.date | date: "%B %-d, %Y" }}
       {% if page.author %} - {{ page.author }}{% endif %}
     </p>
