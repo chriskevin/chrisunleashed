@@ -1,11 +1,12 @@
 ---
 layout: post
 title: "Mastering Git"
-image: "assets/img/"
+image: "assets/img/git_1600.png"
 feature-img: "assets/img/git_1600.png"
 heading-dark: true
 tags: [tools, version handling]
 ---
+
 **This is part of a series about developing your skills as a software developer. We use different tools on a daily basis and one of the most frequently used is Git. Usually we just care about its version handling capabilities, however there is so much more value that we could get from the tool by just being a bit more mindful of how we use it.**
 
 **How do you attain a clean and useful commit log?**
