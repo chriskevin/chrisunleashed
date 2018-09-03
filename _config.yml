@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
 baseurl: /chrisunleashed
-url: https://chriskevin.github.io/
+url: https://chriskevin.github.io
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
