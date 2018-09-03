@@ -6,7 +6,7 @@ feature-img: "assets/img/git_1600.png"
 heading-dark: true
 tags: [tools, version handling]
 ---
-**This is part of a series about developing your skills as a software developer. We use different tools on a daily basis and one of the most frequently used is Git. Usually we just care about it's version handling capabilities, however there is so much more value that we could get from the tool by just being a bit more mindful of how we use it.**
+**This is part of a series about developing your skills as a software developer. We use different tools on a daily basis and one of the most frequently used is Git. Usually we just care about its version handling capabilities, however there is so much more value that we could get from the tool by just being a bit more mindful of how we use it.**
 
 **How do you attain a clean and useful commit log?**
 
@@ -26,7 +26,7 @@ You can use `git blame`, `git bisect` or `git grep` depending on how much inform
 
 **How can I use the commit history to find useful information?**
 
-`git log` och `git shortlog` are really powerful commands. They have tons of filters to help you extract the information that you want. John Kagga explores the most useful use cases in his article [Exploring the Git log command – The Andela Way - John Kagga](https://medium.com/the-andela-way/exploring-the-git-log-command-9117b9ff3c2c).
+`git log` and `git shortlog` are really powerful commands. They have tons of filters to help you extract the information that you want. John Kagga explores the most useful use cases in his article [Exploring the Git log command – The Andela Way - John Kagga](https://medium.com/the-andela-way/exploring-the-git-log-command-9117b9ff3c2c).
 
 **How do I pick the best suited branch strategy?**
 
@@ -44,17 +44,17 @@ Derek Gourlay explains this well [Git - When to Merge vs. When to Rebase - Derek
 
 **When should I tag my commits?**
 
-Tags should be used to mark up special commits, usually to indicate a new version. [Semantic Versioning](https://semver.org/) and [Compatible Versioning](https://github.com/staltz/comver) are two good schemes to follow. This makes it easy to find a specific point and maintain a changelog with all features up until that point. Version tagging is also better to automate in your CI pipeline by reading from one of your manifests. Wether it being Maven pom.xml, Gradle build.gradle or npm package.json. The good thing with tags is that they are also easy to create/update/delete retroactively.
+Tags should be used to mark up special commits, usually to indicate a new version. [Semantic Versioning](https://semver.org/) and [Compatible Versioning](https://github.com/staltz/comver) are two good schemes to follow. This makes it easy to find a specific point and maintain a changelog with all features up until that point. Version tagging is also better to automate in your CI pipeline by reading from one of your manifests. Whether it being Maven pom.xml, Gradle build.gradle or npm package.json. The good thing with tags is that they are also easy to create/update/delete retroactively.
 
 **Why should I keep my stash and local branches tidy?**
 
-In the beginning you might not think much about what you put in your stash or the branches that you checkout. However it does not take long until you will be overrun with a long list of discarded stuff. Run `git stash list` to see your entire stash. If you use `git stash pop` a lot then you might have a pretty clean list. However if you use `git stash apply` then stash will not be removed. It is easy to clean your stack with either `git stash clear` if you want to get rid of everything or `git stash drop` for a specific stash.
+In the beginning you might not think much about what you put in your stash or the branches that you checkout. However it does not take long until you will be overrun with a long list of discarded stuff. Run `git stash list` to see your entire stash. If you use `git stash pop` a lot then you might have a pretty clean list. However if you use `git stash apply` then stash will not be removed. It is easy to clean your stash with either `git stash clear` if you want to get rid of everything or `git stash drop` for a specific stash.
 
 **What are the most useful Git Hooks?**
 
-You should run your local testing on a commit hook. I know some people would argue that this is annoying and want to do it on push only. However there are some good points to why you should do it for every commit. The first one is when you are working trunk based, then waiting until push is too late. In this case each and every commit should be stable and production ready so that your team mates can review and ok it. The second point is that if you get code style and test errors at push then you need to create another commit to add those. Then you should squash that commit together with the one(s) you were trying to push. So basically you just added more manual steps when you could have had a closer feedback loop and fixed the problems early.
+You should run your local testing on a `pre-commit` hook. I know some people would argue that this is annoying and want to do it on `pre-push` only. However there are some good points to why you should do it for every commit. The first one is when you are working trunk based, then waiting until push is too late. In this case each and every commit should be stable and production ready so that your team mates can review and ok it. The second point is that if you get code style and test errors at push then you need to create another commit to add those. Then you should squash that commit together with the one(s) you were trying to push. So basically you just added more manual steps when you could have had a closer feedback loop and fixed the problems early.
 
-It is also nice to add `git status` to your commit hook.
+It is also nice to add some visual feedback to the current state after a commit. I usually add `git status` to my `post-commit` hook. I also got a tip from [Simon Forsberg](https://twitter.com/simonforsberg), `git log --branches --decorate --graph --oneline --all`. This visualizes a graph of commits from all branches together with commit hash and a short log message.
 
 **Conclusion**
 
