@@ -55,7 +55,7 @@ In the beginning you might not think much about what you put in your stash or th
 
 You should run your local testing on a `pre-commit` hook. I know some people would argue that this is annoying and want to do it on `pre-push` only. However there are some good points to why you should do it for every commit. The first one is when you are working trunk based, then waiting until push is too late. In this case each and every commit should be stable and production ready so that your team mates can review and ok it. The second point is that if you get code style and test errors at push then you need to create another commit to add those. Then you should squash that commit together with the one(s) you were trying to push. So basically you just added more manual steps when you could have had a closer feedback loop and fixed the problems early.
 
-It is also nice to add some visual feedback to the current state after a commit. I usually add `git status` to my `post-commit` hook. I also got a tip from [Simon Forsberg](https://twitter.com/simonforsberg), `git log --branches --decorate --graph --oneline --all`. This visualizes a graph of commits from all branches together with commit hash and a short log message.
+It is also nice to add some visual feedback to the current state after a commit. I usually add `git status` to my `post-commit` hook. I also got a tip from [Simon Forsberg](https://codereview.stackexchange.com/users/31562/simon-forsberg?tab=profile), `git log --branches --decorate --graph --oneline --all`. This visualizes a graph of commits from all branches together with commit hash and a short log message.
 
 **Conclusion**
 
