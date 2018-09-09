@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     jekyll-theme-type (1.1)
-      jekyll (~> 3.4)
+      jekyll (~> 3.8)
       jekyll-paginate (~> 1.1)
 
 GEM
@@ -98,8 +98,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.12)
+  bundler (~> 1.16)
   html-proofer
+  jekyll
   jekyll-seo-tag
   jekyll-sitemap
   jekyll-theme-type!
