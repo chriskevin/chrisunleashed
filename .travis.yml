@@ -3,8 +3,7 @@ rvm:
   - 2.4.1
 
 install:
-  - gem install jekyll
-  - gem install html-proofer
+  - bundle install
 
 script: jekyll build && htmlproofer --http-status-ignore "999" --check-html --assume-extension ./_site
 
