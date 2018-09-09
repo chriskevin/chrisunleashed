@@ -5,7 +5,9 @@ rvm:
 install:
   - bundle install
 
-script: jekyll build && htmlproofer --http-status-ignore "999" --check-html --assume-extension ./_site
+script:
+  - jekyll build
+  # - htmlproofer --http-status-ignore "999" --check-html --assume-extension ./_site
 
 # branch whitelist, only for GitHub Pages
 branches:
