@@ -2,6 +2,7 @@
 layout: page
 ---
 
+<article {% if page.feature-img %}class="feature-image"{% endif %}>
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tag_words = site_tags | split:',' | sort %}
 
@@ -29,3 +30,4 @@ layout: page
     {% endfor %}
   {% endunless %}
 {% endfor %}
+</article>

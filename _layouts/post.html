@@ -15,7 +15,9 @@ layout: default
   {% include tags_list.html tags=page.tags tag_count=page.tags.size %}
 </article>
 
-{% include gpgc_comments.html post_title=page.title %}
+<aside style="clear: both">
+  {% include gpgc_comments.html post_title=page.title %}
+</aside>
 
 <!-- Disqus -->
 {% if site.theme_settings.disqus_shortname %}
