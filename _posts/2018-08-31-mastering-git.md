@@ -35,7 +35,11 @@ Picking the right branch strategy is mostly up to how your team wants to work. T
 
 **When should I merge and rebase?**
 
-Derek Gourlay explains this well [Git - When to Merge vs. When to Rebase - Derek Gourlay](https://www.derekgourlay.com/blog/git-when-to-merge-vs-when-to-rebase/)
+Use rebase to get changes from the top of the hierarchy and merge when you want to move your changes back to the top. By rebasing into your feature branch you can avoid unnecessary merge commits. And when your branch is synched with the branch that you want to merge into then a fast-forward merge is done, which does not produce merge commits either. Derek Gourlay explains all of this in more detail [Git - When to Merge vs. When to Rebase - Derek Gourlay](https://www.derekgourlay.com/blog/git-when-to-merge-vs-when-to-rebase/)
+
+**When is it appropriate to squash my commits?**
+
+If you have WIP commits or small fixes like misspelling etc. then it is a good idea to squash them together to form one commit. But as stated earlier about keeping commits clean it is important that each commit still has a clear intent. If squashing produces a single commit that is still understandable without an elaborate description, then by all means squash. Steven Schwenke elaborates more on this in [Git: To Squash or Not to Squash? - Steven Schwenke](https://dzone.com/articles/git-to-squash-or-not-to-squash).
 
 [//]: # (**When should I use cherry-pick?**)
 
