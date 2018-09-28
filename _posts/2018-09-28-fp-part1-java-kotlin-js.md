@@ -35,11 +35,11 @@ Function purity is when a function is deterministic and free from side effects. 
 
 **Examples of function purity**
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/function-purity/function-purity.java"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/function-purity/function-purity.java"></script>
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/function-purity/function-purity.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/function-purity/function-purity.kt"></script>
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/function-purity/function-purity.js"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/function-purity/function-purity.js"></script>
 
 **What is referential transparency?**
 
@@ -59,11 +59,11 @@ If you are running expensive computations on data that is recurring. Another use
 
 **Examples of memoization**
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/memoization/memoization.java"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/memoization/memoization.java"></script>
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/memoization/memoization.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/memoization/memoization.kt"></script>
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/memoization/memoization.js"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/memoization/memoization.js"></script>
 
 [//]: # (**What is lazy evaluation?**)
 
@@ -82,11 +82,11 @@ Currying on it's own is not very useful. However it let's us leverage partial ap
 
 **Examples of currying**
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/curry/curry.java"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/curry/curry.java"></script>
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/curry/curry.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/curry/curry.kt"></script>
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/curry/curry.js"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/curry/curry.js"></script>
 
 **What does composition mean in the case of functions?**
 
@@ -98,11 +98,11 @@ Whenever you have two or more functions that you want to combine to create a mor
 
 **Examples of function composition**
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/function-compose/function-compose.java"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/function-compose/function-compose.java"></script>
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/function-compose/function-compose.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/function-compose/function-compose.kt"></script>
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/function-compose/function-compose.js"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/function-compose/function-compose.js"></script>
 
 **What is partial application?**
 
@@ -114,11 +114,11 @@ It let's you write very generic functions that you can "configure" to make them 
 
 **Examples of partial application**
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/partial-application/partial-application.java"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/partial-application/partial-application.java"></script>
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/partial-application/partial-application.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/partial-application/partial-application.kt"></script>
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/partial-application/partial-application.js"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/partial-application/partial-application.js"></script>
 
 **What is pointful/pointfree?**
 
@@ -129,11 +129,11 @@ This is more or less a personal preference, but if you lean more towards elimina
 
 **Examples of pointful/pointfree**
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/pointfree/pointfree.java"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/pointfree/pointfree.java"></script>
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/pointfree/pointfree.kt"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/pointfree/pointfree.kt"></script>
 
-<script src="http://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/pointfree/pointfree.js"></script>
+<script src="https://gist-it.appspot.com/https://github.com/chriskevin/programming-idioms/blob/master/pointfree/pointfree.js"></script>
 
 [//]: # (**What is equational reasoning?**)
 
@@ -147,7 +147,7 @@ This is more or less a personal preference, but if you lean more towards elimina
 * [What's wrong in Java 8, part VI: Strictness - Pierre-Yves Saumont](https://dzone.com/articles/whats-wrong-java-8-part-vi)
 * [How to Create an Immutable Class in Java - Hussein Terek](https://dzone.com/articles/how-to-create-an-immutable-class-in-java)
 * [Functional Programming with Java 8 by - Venkat Subramaniam](https://www.youtube.com/watch?v=15X0qFtBqiQ)
-* [Vavr](http://www.vavr.io/)
+* [Vavr](https://www.vavr.io/)
 * [Immutables](https://immutables.github.io/)
 
 **Kotlin Resources**
