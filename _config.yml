@@ -79,6 +79,7 @@ sass:
   style: :compressed
 plugins: 
   - jekyll-paginate
+  - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
 exclude:
