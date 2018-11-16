@@ -6,11 +6,11 @@ feature-img: "assets/img/mathematics-1509559_1280.jpg"
 tags: [functional programming, Java, JavaScript]
 ---
 
-**This is part of a series about developing your skills as a software developer. Last time we talked about functional programming we only touched [the basics](https://chriskevin.github.io/chrisunleashed/2018/09/28/fp-part1-java-kotlin-js.html). Beyond this point we start heading down the rabbit hole, which in this case goes very deep. All the way down to Category Theory. Now programming and mathematics start to get interrelated. However in this article we will try to stay more close to the practical applications in programming and leave the advanced math for a later time.**
+**This is part of a series about developing your skills as a software developer. Last time when we talked about functional programming we only touched [the basics](https://chriskevin.github.io/chrisunleashed/2018/09/28/fp-part1-java-kotlin-js.html). Beyond this point we start heading down the rabbit hole, which in this case goes very deep. All the way down to Category Theory. Now programming and mathematics start to get interrelated. However in this article we will try to stay more close to the practical applications in programming and leave the advanced math for a later time.**
 
-**What is category theory?**
+**What is Category Theory?**
 
-Prof Frisby gives this simplified explanation, "Category theory is an abstract branch of mathematics that can formalize concepts from several different branches such as set theory, type theory, group theory, logic, and more. It primarily deals with objects, morphisms, and transformations, which mirrors programming quite closely. Here is a chart of the same concepts as viewed from each separate theory." [Prof. Frisby Ch.05 - Coding by Composition](https://mostly-adequate.gitbooks.io/mostly-adequate-guide/ch05.html#category-theory) In reality it is a bit more complex than that, but delving deeper right now will not do us much good. However there are some basic math that we need to look at to make more sense of semi groups, monoids, functors and monads. These concept that are of interest for us are **associativity**, **commutativity** and **identity**.
+Prof Frisby gives this simplified explanation, "Category theory is an abstract branch of mathematics that can formalize concepts from several different branches such as set theory, type theory, group theory, logic, and more. It primarily deals with objects, morphisms, and transformations, which mirrors programming quite closely.", [Prof. Frisby Ch.05 - Coding by Composition](https://mostly-adequate.gitbooks.io/mostly-adequate-guide/ch05.html#category-theory). In reality it is a bit more complex than that, but delving deeper right now will not do us much good. However there are some basic math that we need to look at to make more sense of **Semi Groups**, **Monoids**, **Functors** and **Monads**. The concepts that are of interest to us are **associativity**, **commutativity** and **identity**.
 
 **What is associativity?**
 
@@ -28,34 +28,63 @@ Identity is when you combine a binary operator (e.g. + or ·) with a [neutral el
 
 We talked about composition last time but it is good to do a quick repetition here as well. ```(f ∘ g)(x) = g(f(x))```
 
-**What is a semi group?**
+**What is a Semi Group?**
 
-Now what is this semi group thing? Simply put it is a type that has a `concat` method and is associative. [Prof. Frisby gives a good detailed explanation of semi groups](https://egghead.io/lessons/javascript-combining-things-with-semigroups). While most of us have never though about it we have actually used semi groups several times. Both String and a List are semi groups since both of these can be concatenated and are associative.
+Now what is this semi group thing? Simply put it is a type that has a `concat` method and is associative. [Prof. Frisby gives a good detailed explanation of Semi Groups](https://egghead.io/lessons/javascript-combining-things-with-semigroups). While most of us have never though about it we have actually used semi groups several times. Both String and a List are semi groups since both of these can be concatenated and are associative.
 
-**What is a monoid?**
+**What is a Monoid?**
 
-A monoid is a semi group which also has a neutral element. So String is a not just a semi group but also a monoid since it has `""` as a neutral element and the same thing goes for List which has []. Other monoids are addition and multiplication.
+A monoid is a semi group which also has a neutral element. So String is not just a semi group but also a monoid since it has `""` as a neutral element and the same thing goes for List which has `[]`. Other monoids are addition and multiplication.
 
-**What is the point of knowing about semi groups and monoids?**
+**What is the point of knowing about Semi Groups and Monoids?**
 
-They tell us additional details about our computations. If we know something is a semi group then we also know that there is an unsafe computation that we also need to handle while on the other hand the monoid can guarantee us a value since it has it's neutral element (empty value).
+They tell us additional details about our computations. If we know something is a semi group then we also know that there is an unsafe (breaking) computation that we also need to handle while on the other hand the monoid can guarantee us a value since it has it's neutral element (empty value).
 
-**What is a functor?**
+**What is a Functor?**
 
-The overly simplified explanation of a functor is a type that is a container of a value. This container type has an interface which is the `.map` method which takes a function as an argument. In practice what you do is put a value inside of the container type and then you tell it to transform the containing value by passing a function to the map method. This will return a new instance of the same container type but with the new value.
+A much simplified explanation of a functor is a type that is a container of a value. This container type has an interface which is the `.map` method which takes a function as an argument. In practice what you do is put a value inside of the container type and then you tell it to transform the containing value by passing a function to the `map` method. This will return a new instance of the same container type but with the new value.
 
-**What are functors useful for?**
+```
+A psuedo code example of a functor.
 
-The previous example was of the most basic type of functor called the **Identity** functor. This is related to the identity function and identity property, but all of that is outside of scope for this article. What is more interesting is that there are other types of functors and every functor has an internal context. Take for example the List functor which holds a list of values. When calling `map` it will internally iterate through the list of values that it holds. This is where it starts to get very powerful, from the outside you just call the same `map` method with any generic function and it just works. The functor abstracts away all the tedious details.
+container = Container.of(123) // Container(123)
 
-**What is a monad?**
+container.map(x -> x * 2) // Container(246)
+```
+
+**What are Functors useful for?**
+
+The previous example was of the most basic type of functor called the **Identity** functor. This is related to the identity function and identity property, but all of that is outside of scope for this article. What is more interesting is that there are other types of functors and every functor has an internal context. Take for example the `List` functor which holds a list of values. When calling `map` it will internally iterate through the list of values that it holds. This is where it starts to get very powerful, from the outside you just call the same `map` method with any generic function and it just works. The functor abstracts away all the tedious details.
+
+```
+Another pseudo code example of functors.
+
+list = List.of(1, 2, 3) // List(1, 2, 3)
+
+list.map(x -> x * 2) // List(2, 4, 6)
+
+Externally they look the same, but interally the the functor handles the application of the function differently in relation to the functors internal context.
+```
+
+**What is a Monad?**
 
 Just like the explanation of what a functor is, this is also going to be a bit over simplified. But to keep it understandable you can say that a monad is a functor with an additional `.of` method which is more or less a factory method and a chain/join/bind (depending on programming language) method is a monad. The join function is used for flattening monads when they become nested e.g. `Monad(Monad(value))`. There are also three laws that they need to follow to truly be monads, associativity, right identity and left identity. (I will provide an update later where I explain these laws properly).
 
-**What are monads useful for?**
+```
+Pseudo example of a monad.
+
+monad = Monad.of(1) // Monad(1)
+
+monad.map(x -> x + 1) // Monad(2)
+monad.map(someFunctionReturningAMonad) // Monad(Monad(1))
+
+nestedMonad.chain(someFunctionReturningAMonad) // Monad(1)
+```
+
+**What are Monads useful for?**
 Like functors, monads are very versatile since they all expose the same simple interface through `map` but internally the can solve different problems. One of these is the **Maybe/Optional** monad. Internally it handles whether a value exists or not. When calling `map` it will check if it has a value, if it does it will apply the provided function otherwise ignore it. This allows you to build up a computation of things that should happen given that the value exists. It is first at the end that you will need to consider what to do if the value does not exist. Either you return the Maybe or you handle it at the end of your mapping chain. This produces very clean code and you eliminate the need of indenting and nesting that if/else statements create. A some monads are also sum types. Other notable monads are Either that returns one of two possible values (values can be of different types), **Try** that handles success or failure cases, **IO/Task/Future** that handle execution of code that have side effects or are asynchronous.
 
-**What is a sum type?**
+**What is a Sum type?**
 
 The Maybe monad is usually implemented as a sum type where the sum is a **Just/Some** and a **Nothing** type. The Just will apply functions when `map` is called while Nothing will instead ignore it. It is also the Just that is the only one that actually contains a value.
 
