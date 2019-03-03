@@ -13,6 +13,7 @@ script:
 branches:
   only:
   - master
+  - /^greenkeeper/.*$/
 
 env:
   global:
