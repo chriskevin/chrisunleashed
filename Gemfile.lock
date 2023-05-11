@@ -92,12 +92,12 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 2.1)
   html-proofer
-  jekyll
-  jekyll-redirect-from
-  jekyll-seo-tag
-  jekyll-sitemap
+  jekyll (>= 3.8)
+  jekyll-redirect-from (>= 0.15.0)
+  jekyll-seo-tag (>= 2.6.1)
+  jekyll-sitemap (>= 1.4.0)
   jekyll-theme-type!
   rake (~> 13.0)
 
 BUNDLED WITH
-   2.1.4
+   2.3.26

@@ -15,10 +15,6 @@ layout: default
   {% include tags_list.html tags=page.tags tag_count=page.tags.size %}
 </article>
 
-<aside style="clear: both">
-  {% include gpgc_comments.html post_title=page.title %}
-</aside>
-
 <!-- Post navigation -->
 {% if site.theme_settings.post_navigation %}
   {% include post_nav.html %}
