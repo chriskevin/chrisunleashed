@@ -9,13 +9,13 @@ $padding-small: 5%;
 $padding-x-small: 3%;
 
 // Brand colours
-$brand-color: #fff;
-$background-color: #fff;
+$brand-color: #f784ff;
+$background-color: #1a1a1a;
 $border-color: rgba(0, 0, 0, 0.1); // rgba recommended if using feature images
 
 // Typography colours
-$text-color: #383838;
-$link-color: #a5c90f;
+$text-color: #fff;
+$link-color: #f784ff;
 $selection-color: #D4D4D4; // visible when highlighting text
 
 // Tags color
@@ -25,13 +25,13 @@ $tags-color: #b0b0b0;
 $search-color: #999;
 
 // Header colours
-$header-link-color: #383838;
+$header-link-color: #f784ff;
 
 // Feature image for articles
 $feature-image-text-color: #fff;
 $feature-image-size: cover; // options include "cover", "contain", "auto"
 
 // Header description box
-$header-desc-background-color: #6f9c3d;
+$header-desc-background-color: #1a1a1a;
 $header-desc-text-color: #FFF;
-$header-desc-link-color: #02453D;
+$header-desc-link-color: #f784ff;

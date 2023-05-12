@@ -5,7 +5,7 @@ url: https://chriskevin.github.io
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: Chris Unleashed
+  title: Chris Kevin Sundberg
   avatar: assets/img/avatar.png
   favicon: /favicon.ico
   gravatar: # Email MD5 hash
@@ -13,11 +13,10 @@ theme_settings:
 
   # Header and footer text
   header_text: >
-     <p>Challenging The Software Status Quo For A More Exciting Future</p>
-     <p>From The Mind Of Chris Sundberg</p>
+     
   header_text_feature_image:
   footer_text: >
-   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
+   
 
   # Icons
   rss: true
@@ -28,17 +27,17 @@ theme_settings:
   facebook:
   flickr:
   gitlab:
-  github: chriskevin
+  github:
   google_plus:
   instagram:
-  linkedin:  https://www.linkedin.com/in/chris-sundberg-7b716744/ # Full URL
+  linkedin:
   pinterest:
   reddit:
   soundcloud:
-  stack_exchange: https://stackexchange.com/users/3005001/chris-sundberg # Full URL
+  stack_exchange:
   steam:
   tumblr:
-  twitter: chrisXkevin
+  twitter:
   wordpress:
   youtube:
 
